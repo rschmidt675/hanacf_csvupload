@@ -1,0 +1,54 @@
+{
+	"grant-service": {
+		"object_owner": {
+			"roles": [
+				"ANALYTICS::external_access_g",
+				"TARGET::external_access_g",
+				"TARGET_ECC::external_access_g",
+				"TARGET_ECC_BKP::external_access_g",
+				"TARGET_ANALYTICS::external_access_g",
+				"TARGET_ECC_AUDIT::external_access_g",
+				"TARGET_GLPI::external_access_g",
+				"TARGET_LECOM::external_access_g",
+				"TARGET_MAISFLUXO::external_access_g",
+				"TARGET_MAKER::external_access_g",
+				"TARGET_WISEIT::external_access_g",
+				"TARGET_RPA::external_access_g",
+				"TARGET_WPA::external_access_g",
+				"SOURCE::external_access_g",
+				"SOURCE_ECC::external_access_g",
+				"SOURCE_ECC_AUDIT::external_access_g",
+				"SOURCE_LECOM::external_access_g",
+				"SOURCE_MAISFLUXO::external_access_g",
+				"SOURCE_RPA::external_access_g",
+				"SOURCE_WPS::external_access_g",
+				"MODELING"
+			]
+		},
+		"application_user": {
+			"roles": [
+				"ANALYTICS::external_access_g",
+				"TARGET::external_access_g",
+				"TARGET_ECC::external_access_g",
+				"TARGET_ECC_BKP::external_access_g",
+				"TARGET_ANALYTICS::external_access_g",
+				"TARGET_ECC_AUDIT::external_access_g",
+				"TARGET_GLPI::external_access_g",
+				"TARGET_LECOM::external_access_g",
+				"TARGET_MAISFLUXO::external_access_g",
+				"TARGET_MAKER::external_access_g",
+				"TARGET_WISEIT::external_access_g",
+				"TARGET_RPA::external_access_g",
+				"TARGET_WPA::external_access_g",
+				"SOURCE::external_access_g",
+				"SOURCE_ECC::external_access_g",
+				"SOURCE_ECC_AUDIT::external_access_g",
+				"SOURCE_LECOM::external_access_g",
+				"SOURCE_MAISFLUXO::external_access_g",
+				"SOURCE_RPA::external_access_g",
+				"SOURCE_WPS::external_access_g",
+				"MODELING"
+			]
+		}
+	}
+}

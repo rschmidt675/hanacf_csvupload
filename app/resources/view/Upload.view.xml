@@ -1,0 +1,45 @@
+<mvc:View
+	controllerName="ZCSVFILEUPLOAD.ZCSVFILEUPLOAD.controller.Upload"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	class="viewPadding">
+	<Page showHeader="true" title="Carga de Lojistas Informantes exSonae" showFooter="true">
+		<content>
+			<l:VerticalLayout>
+				<u:FileUploader
+					id="fileUploader"
+					name="fup_data"
+					uploadUrl="file_upload.xsjs"
+					tooltip="Faça o upload de um novo arquivo para o BI"
+					uploadComplete="handleUploadComplete"
+					change="handleValueChange"
+					typeMissmatch="handleTypeMissmatch"
+					style="Emphasized"
+					fileType="csv"
+					placeholder="Escolha um arquivo para carregar...">
+						<u:parameters>
+							<u:FileUploaderParameter
+								name="param1"
+								value="Foo"/>
+							<u:FileUploaderParameter
+								name="param2"
+								value="bar"/>
+						</u:parameters>
+						<u:headerParameters>
+							<u:FileUploaderParameter
+								name="headerParam1"
+								value="Foo"/>
+							<u:FileUploaderParameter
+								name="headerParam2"
+								value="bar"/>
+						</u:headerParameters>
+					</u:FileUploader>
+				<Button
+					text="Carregar"
+					press="handleUploadPress"/>
+			</l:VerticalLayout>
+		</content>
+	</Page>
+</mvc:View>

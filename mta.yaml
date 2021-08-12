@@ -1,0 +1,56 @@
+ID: hanacf_csvupload
+_schema-version: '3.1'
+version: 0.0.1
+
+modules:
+   - name: hanacf_csvupload-db
+     type: hdb
+     path: db
+     parameters:
+        memory: 128M
+        disk-quota: 256M
+     requires:
+        - name: ALNS_HDI
+        - name: grant-service
+
+   - name: hanacf_csvupload-srv
+     type: nodejs
+     path: srv
+     parameters:
+        disk-quota: 350M
+        memory: 100M
+     provides:
+        - name: srv_api
+          properties:
+             url: ${default-url}
+     requires:
+        - name: ALNS_HDI
+        - name: ALNS_UAA
+
+   - name: hanacf_csvupload
+     type: html5
+     path: app
+     parameters:
+        disk-quota: 170M
+        memory: 100M
+     requires:
+        - name: ALNS_UAA
+        - name: srv_api
+          group: destinations
+          properties:
+             name: srv
+             url: ~{url}
+             forwardAuthToken: true
+
+resources:
+   - name: <CF SECURITY LAYER NAME>
+     type: org.cloudfoundry.managed-service
+     parameters:
+        service-plan: application
+        service: xsuaa
+   - name: <CF HDI CONTAINER NAME>
+     type: com.sap.xs.hdi-container
+   - name: grant-service
+     type: org.cloudfoundry.existing-service
+     parameters:
+        service-name: grant-service 

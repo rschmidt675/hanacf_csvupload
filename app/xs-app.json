@@ -1,0 +1,19 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "(.*)(.xsjs)",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.Viewer",
+      "csrfProtection": false,
+      "destination": "srv"
+    },
+    {
+      "source": "/(.*)",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.Viewer",
+      "localDir": "resources"
+    }
+  ]
+}
